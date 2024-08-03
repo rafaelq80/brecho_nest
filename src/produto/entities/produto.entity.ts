@@ -14,6 +14,9 @@ export class Produto{
     @Column({length: 100, nullable: false})
     nome: string;
 
+    @Column({type: "varchar", length: 5, nullable: false})
+    tamanho: string;
+
     @IsNumber({maxDecimalPlaces: 2})
     @IsNotEmpty()
     @Column({type: "decimal", precision: 10, scale: 2, nullable: false})
