@@ -17,6 +17,9 @@ import { Produto } from './produto/entities/produto.entity';
       entities: [Categoria, Produto],
       synchronize: true,
       logging: true,
+      extra:{
+          decimalNumbers: true,
+      },
     }),
     CategoriaModule,
     ProdutoModule,

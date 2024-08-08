@@ -6,7 +6,7 @@ import { Categoria } from "../../categoria/entities/categoria.entity";
 @Entity({name: "tb_produtos"})
 export class Produto{
 
-    @PrimaryGeneratedColumn() // Chave Primária e Auto_Increment
+    @PrimaryGeneratedColumn()
     id: number;
 
     @Transform(({ value }: TransformFnParams) => value?.trim()) 
@@ -28,6 +28,6 @@ export class Produto{
     @ManyToOne(() => Categoria, (categoria) => categoria.produto, {
         onDelete: "CASCADE"
     })
-    categoria: Categoria; // Chave Estrangeira
+    categoria: Categoria;
     
 }
